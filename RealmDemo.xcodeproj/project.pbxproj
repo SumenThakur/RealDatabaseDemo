@@ -17,6 +17,7 @@
 		E0B22CE22830E2AB0010F6F9 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B22CE12830E2AB0010F6F9 /* RealmDataManager.swift */; };
 		E0B22CE52830E4DA0010F6F9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B22CE42830E4DA0010F6F9 /* Person.swift */; };
 		E0B22CE82830F25A0010F6F9 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B22CE72830F25A0010F6F9 /* PersonCell.swift */; };
+		E0B22CEB283166F90010F6F9 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B22CEA283166F90010F6F9 /* PersonData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E0B22CE12830E2AB0010F6F9 /* RealmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		E0B22CE42830E4DA0010F6F9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E0B22CE72830F25A0010F6F9 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		E0B22CEA283166F90010F6F9 /* PersonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				E0B22CD02830D9B60010F6F9 /* ViewController.swift */,
 				E0B22CE02830E27A0010F6F9 /* ViewModels */,
 				E0B22CE62830F2390010F6F9 /* Cells */,
+				E0B22CE9283166D70010F6F9 /* Data */,
 				E0B22CE32830E4B70010F6F9 /* Models */,
 				E0B22CD22830D9B60010F6F9 /* Main.storyboard */,
 				E0B22CD52830D9B90010F6F9 /* Assets.xcassets */,
@@ -122,6 +125,14 @@
 				E0B22CE72830F25A0010F6F9 /* PersonCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E0B22CE9283166D70010F6F9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E0B22CEA283166F90010F6F9 /* PersonData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 				E0B22CD12830D9B60010F6F9 /* ViewController.swift in Sources */,
 				E0B22CCD2830D9B60010F6F9 /* AppDelegate.swift in Sources */,
 				E0B22CCF2830D9B60010F6F9 /* SceneDelegate.swift in Sources */,
+				E0B22CEB283166F90010F6F9 /* PersonData.swift in Sources */,
 				E0B22CE22830E2AB0010F6F9 /* RealmDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

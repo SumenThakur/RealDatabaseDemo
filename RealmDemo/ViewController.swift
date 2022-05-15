@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tblViewPerson: UITableView!
+    @IBOutlet weak var lblNoPerson: UILabel!
+
 
     let realm = RealmDataManager()
     
@@ -17,32 +19,36 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        deleteAllData()
+        //In first launch it will save all data to realm database then from second launch you will get data according filter
+         
+        //deleteAllData()
         
-        //Please change array names and department after first call
-        //saveObjectToRealm(withNames: ["Sumendra","Amit","Varun","Hariom"], ofDepartment: "iOS")
-        
-        getObjects()
+        // Filtering data according to filter key , if key blank "" then it will return all data, change filter key to iOS, Flutter, Android etc.
+        getObjects(byDepartment: "")
+        if arrayPersons.count > 0 {
+        }else{
+            saveObjectToRealm(withNames: PersonData.personArray)
+        }
         // Do any additional setup after loading the view.
     }
     
-    func saveObjectToRealm(withNames:[String],ofDepartment:String){
+        func saveObjectToRealm(withNames:[[String:String]]){
         // to add users in database accoding to you need change department so you have multiple department type persons
         for (_,obj) in withNames.enumerated(){
         let person = Person()
         let randomId = Int.random(in: 0..<10000)
         person.id = "\(randomId)"
-        person.name = "\(obj)"
-        person.department = "\(ofDepartment)"
+            person.name = "\(obj["name"] ?? "")"
+        person.department = "\(obj["department"] ?? "")"
         realm.SavaDataToRealm(object: person)
         }
     }
     
-    func getObjects(){
+    func getObjects(byDepartment:String){
         //Fetching all stored result from realm datdabase
         arrayPersons = realm.getDataFromRealm(objectType: Person.self)
-        // Filtering data according to filter key , if key blank "" then it will return all data, change filter key to iOS, Flutter, Android etc.
-        arrayPersons = getFilteredArray(array: arrayPersons, filterByDepartment: "")
+        arrayPersons = getFilteredArray(array: arrayPersons, filterByDepartment: byDepartment)
+        lblNoPerson.isHidden = !arrayPersons.isEmpty
         tblViewPerson.reloadData()
     }
     

@@ -98,6 +98,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6CT-Ef-2bL"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Employee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpw-s2-SRe">
+                                <rect key="frame" x="149" y="436" width="116" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,11 +112,14 @@
                             <constraint firstItem="AV3-Ze-SGp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FOM-gK-9O1"/>
                             <constraint firstItem="AV3-Ze-SGp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="GZl-tO-jyD"/>
                             <constraint firstItem="AV3-Ze-SGp" firstAttribute="top" secondItem="dBL-nb-aVG" secondAttribute="bottom" constant="15" id="KUU-c1-Rye"/>
+                            <constraint firstItem="Hpw-s2-SRe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fE2-CI-iXv"/>
+                            <constraint firstItem="Hpw-s2-SRe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gr5-pY-01g"/>
                             <constraint firstItem="AV3-Ze-SGp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vJf-MY-QVJ"/>
                             <constraint firstItem="AV3-Ze-SGp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wb3-Ya-Evh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblNoPerson" destination="Hpw-s2-SRe" id="ca4-jQ-1RW"/>
                         <outlet property="tblViewPerson" destination="AV3-Ze-SGp" id="meF-2V-HVc"/>
                     </connections>
                 </viewController>
