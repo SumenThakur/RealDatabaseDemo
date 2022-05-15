@@ -8,4 +8,4 @@ Step2. Install the Pod, Navigate to path of dowloaded project by terminal and ru
 step3. Open the project by xcworkspace file of project.
 
 
-you can add the person object to realm database 
+You can add the person object to realm database, show all saved persons in table view and you can also delete the all person object from realm database.
